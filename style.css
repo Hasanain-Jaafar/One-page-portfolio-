@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --main-color:rgb(107, 237, 241);
+    --hover-color:rgb(4, 199, 248);
+    --transition:330ms ease-in-out;
+    --box-shadow:rgb(53, 53, 53) 0.5px 2px 6px;
+    --text-shadow:black 1px 2px 4px;
+    
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,13 +42,14 @@
     font-size: 1.5em;
     font-weight: 900;
     text-transform: uppercase;
-    color: rgb(107, 237, 241);
-    text-shadow: black 1px 2px 4px;
+    color: var(--main-color);
+    text-shadow: var(--text-shadow);
+    transition: var(--transition);
 }
+
 .logo a:hover {
-    color:rgb(4, 199, 248);
-    transform:scale(1.2);
-    transition: transform 330ms ease-in-out;
+    color:var(--hover-color);
+    transform:scale(1.1);
 }
 
 .nav-bar-links {
@@ -55,11 +65,12 @@
     display: flex;
     align-content: space-around;
     padding: 0 1em;
-    color: rgb(107, 237, 241);
-    text-shadow: black 1px 2px 4px;
+    color: var(--main-color);
+    text-shadow: var(--text-shadow);
     text-decoration: none;
     font-weight: 400;
     font-size:1.1em;
+    transition: var(--transition);
 }
 
 .nav-bar-links a span {
@@ -68,9 +79,9 @@
 }
 
 .nav-bar-links a:hover {
-    color:rgb(4, 199, 248);
-    transform:scale(1.2);
-    transition: transform 330ms ease-in-out;
+    color:var(--hover-color);
+    transform:scale(1.1);
+   
 }
 /* ----------------------------Nav-Bar Style Above  ------------------*/
 
@@ -83,10 +94,12 @@ header {
     align-items: center;
     max-width: 100%;
     max-height: fit-content;
+  
 }
 
 img {
     display:flex;
+    position: ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -101,10 +114,9 @@ img {
     z-index: 999;
     margin-left: 10%;
     color: white;
-    text-shadow: black 1px 2px 4px;
+    text-shadow: var(--text-shadow);
     font-size: 1.8em;
-    font-weight: 900;
-   
+    font-weight: 900;   
 
 }
 
@@ -115,22 +127,76 @@ img {
     font-size:1.5em;
     margin-top: 10px;
 }
+.name-btn {
+    display: inline-block;
+    margin-top: 20%;
+    margin-left: 5%;
+    padding:0.4em;
+    color:rgb(2, 2, 2);
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;   
+    background-color: rgb(107, 237, 241);
+    width: auto;    
+    border-radius: 8px;
+    border-color: rgb(148, 148, 148);
+    border-width: 1.8px;
+    box-shadow: var(--box-shadow);  
+    transition: var(--transition); 
+    
+}
+
+.name-btn:hover {
+    background-color:var(--hover-color);
+    transform:scale(1.1);
+ 
+}
 
 .social a {
     display: inline-block;
-    color: rgb(107, 237, 241);
-    text-shadow: black 1px 2px 4px;
+    color: var(--main-color);
+    text-shadow: var(--text-shadow);
     font-size: 25px;
     padding-left: 0.5em;
     padding-top:0.5em;
     margin-top:1em;
     letter-spacing: 1em;
+    transition: var(--transition);
 }
 
 .social a:hover {
-    color:rgb(4, 199, 248);
-    transform:scale(1.2);
-    transition: transform 330ms ease-in-out;
+    color:var(--hover-color);
+    transform:scale(1.1);
+   
+}
+
+.card-title {
+    display:flex;
+    justify-content: center;
+    font-size: 2.3em;
+    font-weight: 800;
+    color: var(--main-color) ;
+    margin-bottom: 30px;
+
+
+}
+.content {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: var(--transition);
+}
+
+.card {
+    background-color: white;
+    width: 21em;
+    box-shadow:var(--box-shadow) ;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+
 }
 
 

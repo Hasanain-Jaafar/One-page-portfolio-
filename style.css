@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --main-color:rgb(107, 237, 241);
+    --main-color:#30a6aa;
     --hover-color:rgb(4, 199, 248);
     --transition:330ms ease-in-out;
-    --box-shadow:rgb(53, 53, 53) 0.5px 2px 6px;
-    --text-shadow:black 1px 2px 4px;
+    --box-shadow:rgba(53, 53, 53, 0.281) 0.5px 2px 6px;
+    --text-shadow:rgba(0, 0, 0, 0.247) 1px 2px 4px;
     
 }
 
@@ -24,7 +24,7 @@
     width: 100%;
     height: 10%;
     padding: 1em 0 ;
-    background-color: rgba(199, 199, 199, 0.699);
+    background-color: rgb(3, 3, 3);
     z-index: 999;  
 }
 
@@ -82,18 +82,26 @@
 }
 /* ----------------------------Nav-Bar Style Above  ------------------*/
 
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(199, 199, 199, 0.26);
+}
 header {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    align-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    max-height: fit-content;
+    width: 80%;
+    max-width: 80vw;
     padding: 1rem;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 20%;
   
 }
 
@@ -101,26 +109,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 50%;    
+    max-width: 50%;       
 }
 img{
     opacity: 0.8;
     transition: var(--transition);
-
+    border-radius: 50%/50%;
 }
 img:hover{
     opacity:0.9;
-    border-radius: 50%/50%;
     box-shadow: var(--box-shadow);
-    transform: scale(1.1);
-  
+    transform: scale(1.1);  
 }
+
 .welcome {
-    color: rgb(253, 253, 253);
+    color: rgb(161, 160, 160);
     text-shadow: var(--text-shadow);
     font-size: 1.8em;
     font-weight: 600;
-    width: 55%;   
+    width: 55%;  
+   
 
 }
 
@@ -136,7 +144,7 @@ img:hover{
     margin-top: 10%;
     margin-left: 5%;
     padding:0.4em;
-    color:rgb(2, 2, 2);
+    color:rgb(77, 76, 76);
     font-size: 0.7em;
     font-weight: 700;
     text-transform: capitalize;
@@ -156,15 +164,28 @@ img:hover{
     transform:scale(1.1);
  
 }
-
+.social{
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+.fa-github-square{
+    color: rgb(51, 51, 51);
+}
+.fa-facebook-square{
+    color: rgb(56, 91, 248);
+}
+.fa-linkedin-in{
+    color: rgba(0, 0, 255, 0.842);
+}
+.fa-youtube{
+    color: rgb(211, 33, 33);
+    font-size: 2.2rem;
+}
 .social a {
     display: inline-block;
     color: var(--main-color);
     text-shadow: var(--text-shadow);
-    font-size: 25px;
-    padding-left: 0.5em;
-    padding-top:0.5em;
-    margin-top:1em;
+    font-size: 2rem;    
     letter-spacing: 1em;
     transition: var(--transition);
 }
@@ -174,14 +195,28 @@ img:hover{
     transform:scale(1.1);
    
 }
-
+#skills{
+    width: 100%;
+    height: 100vh;
+}
+.card-title::before{
+    content: "";
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    position: relative;
+    margin-top: -1rem;
+}
 .card-title {
-    display:flex;
+    display: flex;
     justify-content: center;
     font-size: 2.3em;
     font-weight: 800;
-    color: var(--main-color) ;
-    margin-bottom: 30px;
+    color: var(--main-color);
+    margin-bottom: 62px;
+    letter-spacing: 0.6rem;
+    flex-direction: column;
+    align-items: center;
 
 
 }
@@ -193,14 +228,45 @@ img:hover{
     transition: var(--transition);
 }
 
-.card {
+.card-one, .card-two, .card-three, .card-four, .card-five, .card-six {
     background-color: white;
     width: 21em;
     box-shadow:var(--box-shadow) ;
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
-
+}
+.title-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.fa-laptop-medical,
+ .fa-app-store-ios,
+  .fa-language,
+   .fa-bullseye,
+    .fa-satellite-dish,
+    .fa-user-plus{
+    color: #A73A00;
+    font-size: 1.6rem;
+}
+.rm-cardthree, .rm-cardtwo, .rm-cardone, .rm-cardfour, .rm-cardfive, .rm-cardsix{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    transition: var(--transition);
+}
+:where(.rm-cardone,
+ .rm-cardtwo, 
+ .rm-cardthree,
+  .rm-cardfour,
+   .rm-cardfive,
+    .rm-cardsix):hover{
+    transform:scale(1.1);
 }
 
 
